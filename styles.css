@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Lato, "Open Sans", sans-serif;
+  font-size: 22px;
+  color: white;
+}
+
+img,
+a {
+  transition: all 0.3s;
+}
+
+::selection {
+  background: #333333;
+  color: #fff;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    visibility: visible;
+  }
+  50% {
+    visibility: hidden;
+  }
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 91px;
+  width: 100vw;
+  background-color: black;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+#logo-container {
+  margin-left: 10vw;
+}
+
+#logo {
+  height: 75px;
+  width: 75px;
+}
+
+#logo:hover,
+a:hover {
+  opacity: 0.7;
+}
+
+#nav-list {
+  width: 40vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+#welcome-section {
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  /* testing, change background color to white and text color to black */
+  background-color: grey;
+  color: white;
+}
+
+#title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#name {
+  display: block;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 25%;
+}
+
+#left-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5%;
+}
+
+#left-side p {
+  margin-bottom: 10%;
+  margin-left: 60%;
+  font-size: 1.5em;
+  animation: fade-in 1s ease-in-out 0.1s;
+}
+
+#welcome-section h2 {
+  font-size: 1.3em;
+  color: white;
+  font-weight: 150;
+  font-style: italic;
+  margin-top: 5%;
+  animation: fade-in 1s linear;
+}
+
+#cursor {
+  animation: blink 1s step-end infinite 0.8s; /* Adjust animation duration as needed */
+}
+
+#right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#skills h2 {
+  font-size: 4em;
+  font-weight: normal;
+  font-style: normal;
+  margin-bottom: 20%;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 100;
+}
