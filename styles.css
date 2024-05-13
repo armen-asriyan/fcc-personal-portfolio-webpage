@@ -11,17 +11,28 @@ html {
 body {
   font-family: Lato, "Open Sans", sans-serif;
   font-size: 22px;
-  color: white;
+  color: #333333;
 }
 
 img,
-a {
+a,
+.github-pages {
   transition: all 0.3s;
+  text-decoration: none;
 }
 
 ::selection {
   background: #333333;
   color: #fff;
+}
+
+@keyframes slide-in-from-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 @keyframes fade-in {
@@ -66,8 +77,13 @@ a {
 }
 
 #logo:hover,
-a:hover {
+.nav-link:hover,
+.project-tile a:hover > .project-image {
   opacity: 0.7;
+}
+
+.project-tile a:hover .github-pages {
+  opacity: 1;
 }
 
 #nav-list {
@@ -88,12 +104,12 @@ a:hover {
 #welcome-section {
   width: 100%;
   height: 100vh;
-  margin-bottom: 50px;
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
+  padding-bottom: 20px;
   /* testing, change background color to white and text color to black */
-  background-color: grey;
-  color: white;
+  background-color: white;
+  border-bottom: 2px solid #dddddd;
 }
 
 #title-container {
@@ -102,6 +118,10 @@ a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+#title-container h2 {
+  animation: fade-in 1s linear;
 }
 
 #name {
@@ -131,11 +151,9 @@ a:hover {
 
 #welcome-section h2 {
   font-size: 1.3em;
-  color: white;
   font-weight: 150;
   font-style: italic;
   margin-top: 5%;
-  animation: fade-in 1s linear;
 }
 
 #cursor {
@@ -146,9 +164,11 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: slide-in-from-right 1s ease-in-out;
 }
 
 #skills h2 {
+  overflow: hidden;
   font-size: 4em;
   font-weight: normal;
   font-style: normal;
@@ -158,4 +178,69 @@ a:hover {
 h1 {
   font-size: 3em;
   font-weight: 100;
+}
+
+#projects {
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 100px;
+  background-color: white;
+  position: relative;
+}
+
+#projects-section-title {
+  background-color: #dddddd;
+  width: 50vw;
+  height: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 100px;
+  left: 25%;
+}
+
+#projects-section-title h2 {
+  background-color: white;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#projects-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.project-tile {
+  margin-top: 5%;
+  width: 700px;
+  border-top: 20px solid #dddddd;
+  border-left: 20px solid #dddddd;
+  border-right: 20px solid #dddddd;
+  background-color: #333333;
+}
+
+.project-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-tile p {
+  border-top: 20px solid #dddddd;
+  border-bottom: 20px solid #dddddd;
+  text-decoration: none;
+  color: #dddddd;
+  text-align: center;
+  padding: 10px;
+}
+
+.github-pages {
+  background-color: #dddddd;
+  color: #333333;
+  opacity: 0;
 }
