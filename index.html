@@ -9,7 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Color+Emoji&family=Noto+Emoji:wght@300..700&family=RocknRoll+One&family=VT323&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
     <link rel="stylesheet" href="./styles.css">
     <title>Armen Asriyan | Personal Portfolio</title>
 </head>
@@ -18,7 +18,7 @@
     <header id="navbar">
         <div id="logo-container">
             <a href="https://armen-asriyan.github.io/fcc-personal-portfolio-webpage">
-                <img id="logo" class="logo" src="header-logo-transparent.png">
+                <img id="logo" class="logo" src="header-logo-transparent.png" alt="a logo">
             </a>
         </div>
         <nav>
@@ -31,31 +31,19 @@
     </header>
     <main id="about">
         <section id="welcome-section">
-            <div id="left-side">
-                <p>Currently diving deep into the world of web development and game development.
-                </p>
-            </div>
             <div id="title-container">
-                <span id="name">
+                <div id="name">
                     <h1 class="title">Armen Asriyan</h1>
                     <h2>I'm a passionate web development beginner, eager to learn and grow...<span id="cursor">|</span>
                     </h2>
-                </span>
-            </div>
-            <!-- TODO: Style skills section -->
-            <div id="right-side">
-                <div id="skills">
-                    <h2>&lt;HTML&gt;</h2>
-                    <h2>CSS</h2>
-                    <h2>JavaScript{}</h2>
                 </div>
             </div>
         </section>
         <!-- TODO: Add "Projects" and "Contact" sections -->
         <section id="projects">
-            <span id="projects-section-title">
+            <div id="projects-section-title">
                 <h2>Some of my latest projects</h2>
-            </span>
+            </div>
             <div id="projects-container">
                 <div class="project-tile">
                     <a id="survey-form-page" href="https://armen-asriyan.github.io/fcc-survey-form/" target="_blank">
@@ -113,16 +101,17 @@
                 </a>
             </div>
             <div class="contact-logo">
-                <img src="header-logo-big.png" href="logo image">
+                <img src="header-logo-big.png" alt="logo image">
             </div>
         </section>
     </main>
     <footer id="footer">
-        <a href="#welcome-section" class="scroll-up-link">
-            <div class="scroll-up">
+        <div class="scroll-up">
+            <a href="#welcome-section" class="scroll-up-link">
                 <i class="fa-solid fa-chevron-up"></i>
-            </div>
-        </a>
+            </a>
+        </div>
+
     </footer>
 </body>
 
