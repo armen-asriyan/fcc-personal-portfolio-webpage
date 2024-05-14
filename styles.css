@@ -11,6 +11,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -108,7 +109,12 @@ a,
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  width: 30vw;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: 200;
+  text-align: center;
 }
 
 #title-container h2 {
@@ -117,18 +123,13 @@ a,
 
 #welcome-section h2 {
   font-size: 1.3em;
-  font-weight: 150;
+  font-weight: 200;
   font-style: italic;
   margin-top: 5%;
 }
 
 #cursor {
   animation: blink 1s step-end infinite 0.8s; /* Adjust animation duration as needed */
-}
-
-h1 {
-  font-size: 3em;
-  font-weight: 100;
 }
 
 #projects {
@@ -295,6 +296,25 @@ h1 {
     flex-flow: row wrap;
     font-size: 0.8em;
     width: 50vw;
+  }
+
+  #projects {
+    margin-top: auto;
+    padding-top: 50px;
+  }
+
+  #projects-section-title {
+    background-color: var(--decoration-color);
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+  }
+
+  h1 {
+    font-size: 3em;
   }
 
   .contact-logo img {
