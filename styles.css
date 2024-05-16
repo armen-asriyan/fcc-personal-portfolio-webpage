@@ -313,6 +313,10 @@ h1 {
     position: static;
   }
 
+  .github-pages {
+    left: 10px;
+}
+  
   h1 {
     font-size: 3em;
   }
